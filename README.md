@@ -46,6 +46,13 @@ export default App;
 | `borderAnimationColor` | `string`    | No       | `rgba(41, 141, 223, 1)`      | The color of the animated border. You can pass any valid CSS color value. |
 | **Note**               | N/A         | N/A      | N/A                           | A div wrapper is added to the `AnimatedBorder`. Without it, the animated border will take the parent's width and height. Check the example for clarification. |
 
+## Animated Border Example
+
+![Animated Border Example](https://github.com/therohitjha/react-animated-border/blob/main/animated-border.gif?raw=true)
+
+*This image demonstrates the animated border effect.*
+
+
 
 # useSpotlight Hook
 
@@ -115,3 +122,9 @@ const Example = () => {
 
 export default Example;
 ```
+## Example Image
+
+![Spotlight Effect Example](https://github.com/therohitjha/react-animated-border/blob/main/spotlight.gif?raw=true)
+
+*This image demonstrates the spotlight effect in action.*
+
