@@ -67,10 +67,11 @@ The `useSpotlight` hook creates a spotlight effect that follows the mouse pointe
 
 ## Props
 
-| Prop Name      | Type   | Default                      | Description                           |
-|----------------|--------|------------------------------|---------------------------------------|
-| `spotlightColor` | string | `"rgba(41, 141, 223, 0.3)"` | The color of the spotlight effect.    |
-| `hotspotColor`   | string | `"rgba(255, 255, 255, 1)"`  | The color of the area outside the spotlight. |
+| Prop Name        | Type   | Required | Default                      | Description                           |
+|------------------|--------|----------|------------------------------|---------------------------------------|
+| `spotlightColor` | string | No       | `"rgba(41, 141, 223, 0.3)"` | The color of the spotlight effect.    |
+| `hotspotColor`   | string | No       | `"rgba(255, 255, 255, 1)"`  | The color of the area outside the spotlight. |
+
 
 
 
@@ -93,3 +94,24 @@ const SpotlightComponent = () => {
 
 export default SpotlightComponent;
 ````
+```tsx
+import React from 'react';
+import useSpotlight from 'react-animated-border';
+
+const Example = () => {
+  const { handleMouseMove, spotlightStyle } = useSpotlight('rgba(255, 0, 0, 0.5)', 'rgba(0, 0, 0, 0.8)');
+
+  return (
+    <div
+      onMouseMove={handleMouseMove}
+      style={{ width: '100%', height: '400px', ...spotlightStyle, position: 'relative' }}
+    >
+      <h2 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: '#fff' }}>
+        Move your mouse here!
+      </h2>
+    </div>
+  );
+};
+
+export default Example;
+```
